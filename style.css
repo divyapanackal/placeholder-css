@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/* CSS DocumentProject: Costa Rica Royale Website
+----------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------Layout,Table of Contents-----------------------------------------------------------------
+1. BASIC STYLING FOR COMMON HTML ELEMENTS
+2. TYPOS
+3. COMMON CSS CLASSES
+4. SKELITON
+5. HEADDER SECTION
+6. BODY SECTION
+7. FOOTER SECTION
+8. MEDIA QUERIES
+-----------------------------------------------------------------------------------------------------------*/
+
+
+/*................................................
+    1. BASIC STYLING FOR COMMON HTML ELEMENTS
+.................................................*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'source_sans_proregular', sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+  color: #515050;
+  font-size: 100%;
+  height: 100%;
+}
+body,
+input,
+select,
+textarea,
+button {
+  font-family: 'source_sans_proregular', sans-serif;
+  color: #515050;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+a {
+  color: #0f5583;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  width: auto\9;
+}
+ul {
+  margin: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+/**
+*   UI Element: Input elements
+**/
+
+input:not([type="submit"]):not([type="button"]),
+select,
+textarea {
+  line-height: normal;
+  font-size: 16px;
+  background: #fff;
+  width: 100%;
+  border-radius: 4px;
+  padding: 15px 20px;
+  height: auto;
+  margin: 6px 0;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+/* input:not([type="submit"]):focus,
+input:not([type="button"]):focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 3px 1px rgba(52, 52, 52, 0.2);
+  -moz-box-shadow: 0 0 3px 1px rgba(52, 52, 52, 0.2);
+  box-shadow: 0 0 3px 1px rgba(52, 52, 52, 0.2);
+} */
+input[type="submit"],
+input[type="button"],
+button {
+  line-height: 18px;
+  background: transparent;
+  padding: 19px 37px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-size: 18px;
+  font-weight: 800;
+  border: 0;
+  outline: none;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+  /* background: #f26a2e; */
+  /* color: #fff; */
+}
+
+/* Placeholder color */
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #a2a2a2;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #a2a2a2;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #a2a2a2;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #a2a2a2;
+}
+
+/* do not group these rules */
+
+*::-webkit-input-placeholder {
+  color: #a2a2a2;
+}
+*:-moz-placeholder {
+  color: #a2a2a2;
+}
+*:-ms-input-placeholder {
+  color: #a2a2a2;
+}
+input:not([type="submit"]):not([type="button"]).input-error.error,
+select.input-error.error,
+textarea.input-error.error {
+  color: #f80023;
+  border-color: #f80023;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+p,
+ul,
+ul li,
+ol,
+ol li {
+  font-family: 'source_sans_proregular', sans-serif;
+}
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+select {
+  padding: 10px 42px 10px 10px;
+  background: #fff;
+  color: #444;
+  border: 1px solid #dddddd;
+  border-radius: 0;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+}
+select:focus {
+  border: 1px solid #5897b8;
+  box-shadow: none;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #444;
+}
+select::-ms-expand {
+  display: none;
+}
+select:before {
+  content: '';
+  right: 5px;
+  top: -7px;
+  width: 30px;
+  height: 33px;
+  background: #f8f8f8;
+  position: absolute;
+  pointer-events: none;
+  display: block;
+}
+select {
+  position: relative;
+}
+select:after {
+  content: '>';
+  font: 16px Consolas, monospace;
+  color: #444;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 2px;
+  top: -3px;
+  border-bottom: 1px solid #aaa;
+  position: absolute;
+  pointer-events: none;
+  width: 35px;
+  padding: 0 0 5px 0;
+  text-indent: 14px;
+}
+@media screen\0 {
+  select:after {
+    width: 38px;
+    text-indent: 15px;
+    right: 0;
+  }
+}
+@media screen and (min--moz-device-pixel-ratio:0) {
+  select {
+    padding-right: 40px;
+  }
+  select:before {
+    right: 6px;
+  }
+  select:after {
+    text-indent: 14px;
+    right: 6px;
+    top: -5px;
+    width: 36px;
+  }
+}
+
+/*................................................
+    2. TYPOS
+.................................................*/
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.form {
+  position: relative;
+  margin-bottom: 15px;
+}
+.lbl-input {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+      margin-top: -7px;
+      transition: all .3s ease-out;
+      color: green;
+}
+input:focus + .lbl-input,
+.warning {
+  font-size: 10px;
+  top: 10px;
+  margin-top: 0;
+}
+/*................................................
+    3. COMMON CSS CLASSES
+.................................................*/
+
+
+/*................................................
+    4. SKELITON
+.................................................*/
+
+
+/*................................................
+    5. HEADDER SECTION
+.................................................*/
